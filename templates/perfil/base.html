@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+{% load static %}
+
+<head>
+
+    {% include 'material/includes/material_css.html' %}
+    <script src="{% static 'material/js/jquery.js' %}"></script>
+    {% include 'material/includes/material_js.html' %}
+
+
+    <link rel="stylesheet" href="{% static  "perfil/css/estilo.css" %}"/>
+
+
+    <meta charset="UTF-8">
+
+    <title>{% block title %} InteriosUp - Design de Interiores {% endblock %}</title>
+
+</head>
+
+
+<body>
+
+
+{% block nav %}
+
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="">Listar </a></li>
+        <li><a href="">Cadastrar </a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+    </ul>
+
+
+    <nav class="red" role="navigation">
+        <div class="nav-wrapper container-fluid">
+            <a id="logo-container" href="#" class="brand-logo white-text">InteriosUp</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Página Inicial</a></li>
+                <li><a href=""> Sair </a></li>
+
+
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="#">Navbar Link</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+
+{% endblock %}
+
+
+{% block navbread %}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+{% endblock %}
+
+
+{% block footer %}
+
+
+    <footer class="page-footer red">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">InteriosUp </h5>
+                    <!--  <p class="grey-text text-lighten-4">Folha de Pagamento</p> -->
+
+
+                </div>
+                {#                <div class="col l3 s12">#}
+                {#                    <h5 class="white-text">Utilitários</h5>#}
+                {#                    <ul>#}
+                {#                        <li><a class="white-text" href="#!">Downloads</a></li>#}
+                {#                        <li><a class="white-text" href="#!">Drivers</a></li>#}
+                {#                        <li><a class="white-text" href="#!">Manuais</a></li>#}
+                {#                        <li><a class="white-text" href="#!">Parceiros</a></li>#}
+                {#                    </ul>#}
+                {#                </div>#}
+                {#                <div class="col l3 s12">#}
+                {#                    <h5 class="white-text">#</h5>#}
+                {#                    <ul>#}
+                {#                        <li><a class="white-text" href="/fccamaca">Farmácia Camaca</a></li>#}
+                {#                        <li><a class="white-text" href="#!">#</a></li>#}
+                {#                        <li><a class="white-text" href="#!">#</a></li>#}
+                {#                        <li><a class="white-text" href="#!">#</a></li>#}
+                {#                    </ul>#}
+            </div>
+        </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Desenvolvimento: <a class="brown-text text-lighten-3" href="http://marcioweb.com.br">MarcioWeb | Seta
+                Comunicação | Blog do Marcio</a>
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}
+
+
+
+<script src="{% static "perfil/js/init.js" %}"></script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+html {
+    background: url(https://s3-sa-east-1.amazonaws.com/interiosup/backfull.jpg) no-repeat center center fixed;
+}
+
+.espaco {
+    background-color: red;
+    padding-bottom: 10px;
+    margin-bottom: 300px;
+
+}
+
+.espaco1 {
+    height: 600px;
+}
+
+.card-content{
+
+    height: 460px;
+}

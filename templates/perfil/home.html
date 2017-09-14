@@ -1,0 +1,72 @@
+{% extends 'perfil/base.html' %}
+{% load static %}
+
+{% load material_form %}
+
+<title>{% block title %} InteriosUp - Design de Interiores {% endblock %}</title>
+
+
+{% block content %}
+
+    <div class="container-fluid">
+        <br><br>
+
+
+        <div class="container">
+
+
+            <h3>Seja bem vindo a InteriosUP</h3>
+
+            <h4>Precismos realizar algumas perguntas para melhor lhe atender.</h4>
+
+
+            <h3>Qual estilo combina mais com o que você procura? </h3>
+
+
+            {# Primeira Linha #}
+
+
+
+            <div class="row">
+
+                {% for estilo in estilos %}
+
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="{% url 'lista_comodos' estilo.pk %}">
+                            <img src="{{ estilo.imagem }}">
+                            </a>
+                            <span class="card-title"> {{ estilo }} </span>
+                            <a class="btn-floating halfway-fab waves-effect waves-light red" href="{% url 'lista_comodos' estilo.pk %}"><i class="material-icons">add</i></a>
+                        </div>
+                        <div class="card-content">
+                            <p>{{ estilo.descricao }}</p>
+                        </div>
+                    </div>
+                </div>
+
+
+             {% endfor %}
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="espaco1">
+
+    </div>
+
+    </div>
+
+
+
+
+{% endblock %}
+

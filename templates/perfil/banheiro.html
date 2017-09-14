@@ -1,0 +1,80 @@
+{% extends 'perfil/base.html' %}
+{% load static %}
+
+{% load material_form %}
+
+<title>{% block title %} InteriosUp - Design de Interiores {% endblock %}</title>
+
+
+{% block content %}
+
+    <div class="container-fluid">
+        <br><br>
+        <h1>Escola o Seu estilo </h1>
+
+
+        <div class="banheiro container espaco">
+
+            <h3>
+                Banheiro
+            </h3>
+
+            {% for b in banheiros %}
+
+                <input type="radio" name="imagem2" id="{{ b.id }}"/>
+                <label for="{{ b.id }}"><img
+                        src="{{ b.foto }}"
+                        alt="" class="materialboxed" width="240px" title="Moderno"> <br> {{ b.titulo }} <br>
+                    {{ b.descricao }}
+
+                </label>
+
+            {% endfor %}
+
+
+        </div>
+
+        <div class="sala container">
+
+
+            <h3>SALA</h3>
+
+            <br><br>
+
+            <br><br>
+
+            <input type="radio" name="imagem2" id="2i1"/>
+            <label for="2i1"><img
+                    src="http://c.mlcdn.com.br/1500x1500/gabinete-para-banheiro-com-cuba-e-espelho-1-porta1-gaveta-vtec-pegasus-215325300.jpg"
+                    alt="" width="240px" title="Moderno" class="materialboxed"> <br>Moderno </label>
+            <input type="radio" name="imagem2" id="2i2"/>
+            <label for="2i2"><img
+                    src="http://cdn2.limaonagua.com.br/wp-content/uploads/2015/07/23-banheiro-ideia-decoracao-azulejos.jpg"
+                    width="270px" alt="" title="Clássico" class="materialboxed"><br>Classico</label>
+            <input type="radio" name="imagem2" id="2i3"/>
+            <label for="2i3"><img
+                    src="http://i.mlcdn.com.br/1500x1500/gabinete-para-banheiro-com-cuba-e-espelho-3-pecassimples-1-porta-vtec-alpha-086407600.jpg"
+                    alt="" width="240px" class="materialboxed" title="Rustico"><br>Rustico</label>
+            <br><br>
+
+            <br><br>
+
+            <br><br>
+
+            <br><br>
+
+            <br><br>
+
+
+            <br><br> <br><br>
+
+        </div>
+
+
+    </div>
+
+
+
+
+{% endblock %}
+
