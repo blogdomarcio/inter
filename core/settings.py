@@ -28,7 +28,7 @@ SECRET_KEY = '$m%pk+9v!+d$@!b)%58u&rludi0wqbiu4a63qj(ut(_d3$_rj!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['interiosup.pythonanywhere.com', 'localhost', '127.0.0.1',]
 
 
 # Application definition
@@ -128,10 +128,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/'
 
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
-]
+STATIC_ROOT = os.path.join(APP_ROOT, 'static')
 
 
 SESSION_COOKIE_AGE = 3600 # 24 horas * 60 minutos * 60 segundos

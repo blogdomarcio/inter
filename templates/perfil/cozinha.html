@@ -1,0 +1,169 @@
+{% extends 'perfil/base.html' %}
+{% load static %}
+
+{% load material_form %}
+
+<title>{% block title %} InteriosUp - Design de Interiores {% endblock %}</title>
+
+
+{% block content %}
+
+    <div class="container-fluid">
+
+
+        <div class="estilo">
+
+            {% for estilo in est %}
+
+
+                <a class="waves-effect waves-light btn" href="{% url 'lista_cozinha' estilo.pk %}"><i
+                        class="material-icons right">cloud</i>{{ estilo }}</a>
+
+
+            {% endfor %}
+
+        </div>
+
+        <hr>
+
+
+        <div class="banheiro container espaco">
+
+
+            <h4>Escolha a Cozinha que mais lhe agrada: </h4>
+
+            <br>
+
+
+
+            {% for b in quartos %}
+
+
+
+
+                <input type="radio" name="imagem2" id="{{ b.id }}"/>
+                <label for="{{ b.id }}"><img
+                        src="/{{ b.imagem }}"
+                        alt="" class="materialboxed" width="240px" title="{{ b.titulo }}"> <br> <br>
+                </label>
+
+
+
+            {% endfor %}
+
+
+            <hr>
+
+
+            <div class="row">
+
+                <div class="input-field col s12">
+
+                    <h5> 1. Dentre o/ou estilo(s) que melhor se identificou, teve algo ou algum objeto, móvel, cor ou
+                        papel de
+                        parede que não agradou ou modificaria? Qual?</h5>
+                    <i class="material-icons prefix">mode_edit</i>
+
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2"> </label>
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <div class="input-field col s12">
+
+                    <h5> 2. Tem alguma foto(s) que não estava no questionário de estilos que gostou o gostaria que o
+                        projeto se espelhasse? Poderia enviá-la(s)?</h5>
+                    <i class="material-icons prefix">mode_edit</i>
+
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2"> </label>
+                </div>
+
+
+                <br>
+                <br>
+                <br>
+
+
+            </div>
+
+
+            <form action="#">
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Enviar fotos</span>
+                        <input type="file" multiple>
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Selecione um ou mais arquivos">
+                    </div>
+                </div>
+            </form>
+
+
+            <div class="row">
+
+                <div class="input-field col s12">
+
+                    <h5> 3. Descreva sua rotina diária e especiais dentro do ambiente a ser projetado: Ex: recebe amigos
+                        e/ou familiares nos finais de semanas, ou em festas comemorativas</h5>
+                    <i class="material-icons prefix">mode_edit</i>
+
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2"> </label>
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <div class="input-field col s12">
+
+                    <h5>4. Descreva o que imagina para este espaço?: Ex: poucos móveis, cores mais claras e menos
+                        impactantes, mais objetos, dentre outros que achar relevante para seu bem estar.</h5>
+                    <i class="material-icons prefix">mode_edit</i>
+
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2"> </label>
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <div class="input-field col s12">
+
+                    <h5>5. O que facilitaria para você ou sua família dentro do ambiente a ser projetado?.</h5>
+                    <i class="material-icons prefix">mode_edit</i>
+
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2"> </label>
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <div class="input-field col s12">
+
+                    <h5>6. O que acrescentaria de informações importantes para ser bem atendido?</h5>
+                    <i class="material-icons prefix">mode_edit</i>
+
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2"> </label>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+{% endblock %}
+

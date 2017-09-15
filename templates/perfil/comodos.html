@@ -9,16 +9,30 @@
 {% block content %}
 
     <div class="container-fluid">
-        <br><br>
+
+
+        <div class="estilo">
+
+
+            {% for estilo in estilos %}
+
+
+
+                <a class="waves-effect waves-light btn" href="{% url 'lista_comodos' estilo.pk %}"><i class="material-icons right">cloud</i>{{ estilo }}</a>
+
+
+            {% endfor %}
+
+        </div>
+
+        <hr>
 
 
         <div class="container">
 
-            <h3> Escolha o comodo! </h3>
+            <h4> Escolha o comodo que dejesa modificar! </h4>
 
             {# Primeira Linha #}
-
-
 
 
             <div class="row">
@@ -29,11 +43,10 @@
                             <img src="/{{ quarto.imagem }}">
 
                             <span class="card-title">Quarto</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                            <a class="btn-floating halfway-fab waves-effect waves-light red" href="{% url 'lista_quarto' quarto.estilo.id %}"><i class="material-icons">add</i></a>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am
-                                convenient because I require little markup to use effectively.</p>
+                              <p>Um lugar aconchegante!</p>
                         </div>
                     </div>
                 </div>
@@ -44,11 +57,10 @@
                         <div class="card-image">
                             <img src="/{{ sala.imagem }}">
                             <span class="card-title">Sala</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                            <a class="btn-floating halfway-fab waves-effect waves-light red" href="{% url 'lista_sala' quarto.estilo.id %} "><i class="material-icons">add</i></a>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am
-                                convenient because I require little markup to use effectively.</p>
+                              <p>Conforto e Bem-Estar</p>
                         </div>
                     </div>
                 </div>
@@ -57,13 +69,12 @@
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="http://c.mlcdn.com.br/1500x1500/gabinete-para-banheiro-com-cuba-e-espelho-1-porta1-gaveta-vtec-pegasus-215325300.jpg">
+                            <img src="/{{ cozinha.imagem }}">
                             <span class="card-title">Cozinha</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                            <a class="btn-floating halfway-fab waves-effect waves-light red" href="{% url 'lista_cozinha' quarto.estilo.id %} "><i class="material-icons">add</i></a>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am
-                                convenient because I require little markup to use effectively.</p>
+                            <p>Harmonia e Eficiência</p>
                         </div>
                     </div>
                 </div>
@@ -79,13 +90,12 @@
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="http://c.mlcdn.com.br/1500x1500/gabinete-para-banheiro-com-cuba-e-espelho-1-porta1-gaveta-vtec-pegasus-215325300.jpg">
+                            <img src="/{{ lavabo.imagem }}">
                             <span class="card-title">Lavabo</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                            <a class="btn-floating halfway-fab waves-effect waves-light red" href="{% url 'lista_lavabo' quarto.estilo.id %} "><i class="material-icons">add</i></a>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am
-                                convenient because I require little markup to use effectively.</p>
+                             <p>Praticidade e Confoto</p>
                         </div>
                     </div>
                 </div>
@@ -94,13 +104,12 @@
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="http://c.mlcdn.com.br/1500x1500/gabinete-para-banheiro-com-cuba-e-espelho-1-porta1-gaveta-vtec-pegasus-215325300.jpg">
+                            <img src="/{{ externa.imagem }}">
                             <span class="card-title">Área Externa</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                            <a class="btn-floating halfway-fab waves-effect waves-light red" href="{% url 'lista_externa' quarto.estilo.id %} "><i class="material-icons">add</i></a>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am
-                                convenient because I require little markup to use effectively.</p>
+                             <p>Organização é fundamental</p>
                         </div>
                     </div>
                 </div>
@@ -109,13 +118,12 @@
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="http://c.mlcdn.com.br/1500x1500/gabinete-para-banheiro-com-cuba-e-espelho-1-porta1-gaveta-vtec-pegasus-215325300.jpg">
+                            <img src="/{{ lavanderia.imagem }}">
                             <span class="card-title">Lavanderia</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                            <a class="btn-floating halfway-fab waves-effect waves-light red" href="{% url 'lista_lavanderia' quarto.estilo.id %} "><i class="material-icons">add</i></a>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am
-                                convenient because I require little markup to use effectively.</p>
+                               <p>Tudo em Ordem</p>
                         </div>
                     </div>
                 </div>
@@ -130,13 +138,13 @@
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="http://c.mlcdn.com.br/1500x1500/gabinete-para-banheiro-com-cuba-e-espelho-1-porta1-gaveta-vtec-pegasus-215325300.jpg">
+                            <img src="/{{ varanda.imagem }}">
                             <span class="card-title">Varanda</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                            <a class="btn-floating halfway-fab waves-effect waves-light red" href="{% url 'lista_varanda' quarto.estilo.id %} "><i class="material-icons">add</i></a>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am
-                                convenient because I require little markup to use effectively.</p>
+
+                              <p>Laser e descontração</p>
                         </div>
                     </div>
                 </div>
@@ -145,9 +153,9 @@
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="http://c.mlcdn.com.br/1500x1500/gabinete-para-banheiro-com-cuba-e-espelho-1-porta1-gaveta-vtec-pegasus-215325300.jpg">
+                            <img src="/{{ outros.imagem }}">
                             <span class="card-title">Outros </span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                            <a class="btn-floating halfway-fab waves-effect waves-light red" href="{% url 'lista_outros' quarto.estilo.id %} "><i class="material-icons">add</i></a>
                         </div>
                         <div class="card-content">
                             <p>Adega, Closet, Sala de Jantar</p>
@@ -156,19 +164,19 @@
                 </div>
 
 
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="http://c.mlcdn.com.br/1500x1500/gabinete-para-banheiro-com-cuba-e-espelho-1-porta1-gaveta-vtec-pegasus-215325300.jpg">
-                            <span class="card-title">Lavanderia</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am
-                                convenient because I require little markup to use effectively.</p>
-                        </div>
-                    </div>
-                </div>
+{#                <div class="col s12 m4">#}
+{#                    <div class="card">#}
+{#                        <div class="card-image">#}
+{#                            <img src="http://c.mlcdn.com.br/1500x1500/gabinete-para-banheiro-com-cuba-e-espelho-1-porta1-gaveta-vtec-pegasus-215325300.jpg">#}
+{#                            <span class="card-title">Lavanderia</span>#}
+{#                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>#}
+{#                        </div>#}
+{#                        <div class="card-content">#}
+{#                            <p>I am a very simple card. I am good at containing small bits of information. I am#}
+{#                                convenient because I require little markup to use effectively.</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
 
 
             </div>
