@@ -16,8 +16,7 @@
             {% for estilo in est %}
 
 
-                <a class="waves-effect waves-light btn" href="{% url 'lista_quarto' estilo.pk %}"><i
-                        class="material-icons right">cloud</i>{{ estilo }}</a>
+                <a class="waves-effect waves-light btn" href="{% url 'lista_quarto' estilo.pk %}">{{ estilo }}</a>
 
 
             {% endfor %}
